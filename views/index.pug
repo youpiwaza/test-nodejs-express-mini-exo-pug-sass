@@ -3,21 +3,22 @@ extends layout
 block content
   //- https://pugjs.org/language/includes.html
   include includes/vars.pug
-  p.testInclude Hey voici du texte qui vient d'ailleurs : #{tayste}
+  //- p.testInclude Hey voici du texte qui  d'ailleurs : #{tayste}
 
-  header
-    .title
-      img.logo(src="images/logo-rotten-straberry.png")
-      h1 Rotten Strawberry
-    nav
-      ul
-        //- https://pugjs.org/language/iteration.html
-        each val in menu
-          li
-            a(href=val.link) #{val.text}
+  .container
+    header
+      .title
+        img.logo(src="images/logo-rotten-straberry.png")
+        h1 Rotten Strawberry
+      nav.menu
+        ul
+          //- https://pugjs.org/language/iteration.html
+          each val in menu
+            li
+              a(href=val.link) #{val.text}
 
-  mixin monFilmAMwa(film)
-    main(role="main")
+    p Lorem ipsum dolor sit, amet consectetur adipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicingadipisicing elit. Enim delectus expedita nostrum odio officia minus blanditiis voluptatem natus sequi, sint saepe deserunt illo ea vero sit nesciunt est exercitationem sunt at. Suscipit totam reiciendis, ipsum perspiciatis labore itaque a, voluptatibus magnam iure laboriosam iusto mollitia iste repellat quasi ab reprehenderit tempora facilis esse ex omnis, accusantium molestias saepe non animi! Delectus est assumenda illum, officia ipsa consequuntur, minima aspernatur architecto eveniet beatae consectetur odio in ducimus aut recusandae obcaecati aperiam perspiciatis minus adipisci vitae repellendus? Possimus voluptatibus obcaecati excepturi fuga quia a, ducimus architecto nostrum ipsa dolor tenetur illum quos doloribus unde odio suscipit! Perspiciatis suscipit alias nulla quas ratione itaque dolorum provident vitae iusto aliquid totam deleniti dignissimos fugit, est odit dolores architecto eius dolore modi minima aliquam officia officiis quisquam? Adipisci ducimus hic, quidem doloribus molestiae velit autem asperiores! Quae, sint obcaecati eos dolorem delectus iste atque. Iure.
+    mixin monFilmAMwa(film)
       article
         .header
           a(href=film.title.link)
@@ -32,14 +33,28 @@ block content
             each actor in film.actors
               li= actor
           .date= film.date
-  
-  each film in films
-    +monFilmAMwa(film)
+    
+    main(role="main")
+      each film in films
+        +monFilmAMwa(film)
 
-  sidebar
-    form.search
-      input(placeholder="Recherche" type="text")
-      input(type="submit" value="🔍")
+    sidebar
+      form.search
+        table
+          tr
+            td
+              input(placeholder="Recherche" type="text")
+            td
+              input.search-button(type="submit" value="🔍")
+      h3 Catégories
+      ul
+        each val in ["Humour", "Action", "Drama"]
+          li
+            a= val
+    
+    footer
+      p © 2021 / Max 
 
-  footer
-    p © 2021 / Max 
+    //- .test
+    //-   h1 Mon titre
+    //-   p Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, repellendus.  
