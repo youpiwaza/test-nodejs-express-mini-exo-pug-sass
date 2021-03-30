@@ -1,5 +1,45 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  //- https://pugjs.org/language/includes.html
+  include includes/vars.pug
+  p.testInclude Hey voici du texte qui vient d'ailleurs : #{tayste}
+
+  header
+    .title
+      img.logo(src="images/logo-rotten-straberry.png")
+      h1 Rotten Strawberry
+    nav
+      ul
+        //- https://pugjs.org/language/iteration.html
+        each val in menu
+          li
+            a(href=val.link) #{val.text}
+
+  mixin monFilmAMwa(film)
+    main(role="main")
+      article
+        .header
+          a(href=film.title.link)
+            h2= film.title.text
+          .categorie= film.category
+        .main
+          img(src=film.image.src)
+          .description= film.description
+        .footer
+          .realisator= film.realisator
+          ul.actors
+            each actor in film.actors
+              li= actor
+          .date= film.date
+  
+  each film in films
+    +monFilmAMwa(film)
+
+  sidebar
+    form.search
+      input(placeholder="Recherche" type="text")
+      input(type="submit" value="🔍")
+
+  footer
+    p © 2021 / Max 
