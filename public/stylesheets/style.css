@@ -1,158 +1,120 @@
 * {
   box-sizing: border-box;
-  word-break: break-word;
-}
+  word-break: break-word; }
 
 img {
   height: auto;
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 html {
   background-color: #833ab4;
   background-image: linear-gradient(320deg, #690e04 0%, salmon 50%, white 100%);
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 body {
   background-image: url("../images/bg.png");
   /* This is mostly intended for prototyping please download the pattern and re-host for production environments. Thank you! */
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 a {
-  color: #00B7FF;
-}
+  color: #00B7FF; }
 
 article {
   background-color: rgba(0, 0, 0, 0.75);
   border: 5px dotted red;
   color: #fbfbfb;
   margin-bottom: 1em;
-  padding: 1em;
-}
-
-article .description {
-  margin: .5em 0;
-}
+  padding: 1em; }
+  article .description {
+    margin: .5em 0; }
 
 checkbox, input, select, textarea {
   font-size: 1.2em;
   height: 4em;
   padding: .8em 1.6em;
-  width: 100%;
-}
+  width: 100%; }
 
 sidebar {
-  width: 100%;
-}
+  width: 100%; }
 
 .container {
   background-color: rgba(255, 255, 255, 0.2);
   text-align: justify;
-  padding: 0 .5em;
-}
+  padding: 0 .5em; }
 
 .logo {
-  border: 10px dotted red;
-}
+  border: 10px dotted red; }
 
 .menu ul {
   font-size: 2em;
   list-style-type: none;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 .menu li {
   text-align: center;
-  width: 100%;
-}
+  width: 100%; }
 
 .menu a {
   display: block;
   padding: .5em 2em;
-  width: 100%;
-}
-
-.menu a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-}
+  width: 100%; }
+  .menu a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff; }
 
 .search {
-  width: 100%;
-}
-
-.search table {
-  width: 100%;
-}
-
-.search-button {
-  font-size: 1.2em;
-}
+  width: 100%; }
+  .search table {
+    width: 100%; }
+  .search-button {
+    font-size: 1.2em; }
 
 .title {
-  text-align: center;
-}
+  text-align: center; }
 
 @media screen and (min-width: 768px) {
   article .description {
-    margin: 1em 0;
-  }
+    margin: 1em 0; }
   h1 {
     display: inline-block;
-    font-size: 1.8em;
-  }
+    font-size: 1.8em; }
   header {
     display: flex;
-    justify-content: space-between;
-  }
-  header .title {
-    text-align: left;
-  }
+    justify-content: space-between; }
+    header .title {
+      text-align: left; }
   .container {
     text-align: left;
-    padding: .5em 1em;
-  }
+    padding: .5em 1em; }
   .footer {
     display: flex;
-    justify-content: space-between;
-  }
+    justify-content: space-between; }
   .menu ul {
-    font-size: 1.2em;
-  }
+    font-size: 1.2em; }
   .menu li {
     display: inline-block;
-    width: inherit;
-  }
+    width: inherit; }
   .menu a {
     padding: .5em 1em;
-    width: inherit;
-  }
-}
+    width: inherit; } }
 
 @media screen and (min-width: 1280px) {
   .container {
     margin: 0 auto;
-    max-width: 1200px;
-  }
+    max-width: 1200px; }
   .header {
     display: flex;
-    justify-content: space-between;
-  }
+    justify-content: space-between; }
   .main {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1em;
-  }
-  .main .description {
-    padding: 1em;
-  }
-}
+    margin-bottom: 1em; }
+    .main .description {
+      padding: 1em; } }
 
 /* tests de ouf */
 .description {
@@ -172,29 +134,24 @@ sidebar {
   background: linear-gradient(to right, cyan 0%, yellow 100%);
   color: red;
   /* IE6-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
-}
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 ); }
 
 h1 {
-  font-size: 3em;
-}
+  font-size: 3em; }
 
 h2 {
-  font-size: 2.75em;
-}
+  font-size: 2.75em; }
 
 h3 {
-  font-size: 2.5em;
-}
+  font-size: 2.5em; }
 
 h4 {
-  font-size: 2.25em;
-}
+  font-size: 2.25em; }
 
 h5 {
-  font-size: 2em;
-}
+  font-size: 2em; }
 
 h6 {
-  font-size: 1.75em;
-}
+  font-size: 1.75em; }
+
+/*# sourceMappingURL=style.css.map */

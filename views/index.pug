@@ -4,12 +4,13 @@ block content
   //- https://pugjs.org/language/includes.html
   include includes/vars.pug
   //- p.testInclude Hey voici du texte qui  d'ailleurs : #{tayste}
-
+  
   .container
     header
       .title
         img.logo(src="images/logo-rotten-straberry.png")
-        h1 Rotten Strawberry
+        //- La variable provient de routes/index.js
+        h1= MONSUPERTITLE
       nav.menu
         ul
           //- https://pugjs.org/language/iteration.html
